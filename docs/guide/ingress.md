@@ -27,7 +27,7 @@ Traefik 提供了一个简单好用 `Ingress controller`，下文侧重讲解 in
 kubectl create -f /etc/ansible/manifests/ingress/traefik/traefik-ingress.yaml
 ```
 + 注意需要配置 `RBAC`授权
-+ 注意`trafik pod`中 `80`端口为 traefik ingress-controller的服务端口，`8080`端口为 traefik 的管理WEB界面；为后续配置方便指定`80` 端口暴露`NodePort`端口为 `23456`(对应于在hosts配置中`NODE_PORT_RANGE`范围内可用端口)
++ 注意`trafik pod`中 `80`端口为 traefik ingress-controller的服务端口，`8080`端口为 traefik 的管理WEB界面；为后续配置方便指定`80` 端口暴露`NodePort`端口为 `32456`(对应于在hosts配置中`NODE_PORT_RANGE`范围内可用端口)
 
 #### 验证 traefik ingress-controller
 
@@ -38,9 +38,9 @@ traefik-ingress-controller   1         1         1            1           4m
 
 # kubectl get svc -n kube-system traefik-ingress-service
 NAME                      TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)                       AGE
-traefik-ingress-service   NodePort   10.68.69.170   <none>        80:23456/TCP,8080:34815/TCP   4m
+traefik-ingress-service   NodePort   10.68.69.170   <none>        80:32456/TCP,8080:32715/TCP   4m
 ```
-+ 可以看到`traefik-ingress-service` 服务端口`80`暴露的nodePort确实为`23456`
++ 可以看到`traefik-ingress-service` 服务端口`80`暴露的nodePort确实为`32456`
 
 #### 测试 ingress
 

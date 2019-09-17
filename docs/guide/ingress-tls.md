@@ -74,7 +74,7 @@ https://hello.test.com:23457
 
 ```
 $ kubectl get svc -n kube-system | grep dashboard
-kubernetes-dashboard      NodePort    10.68.211.168   <none>        443:39308/TCP	3d11h
+kubernetes-dashboard      NodePort    10.68.211.168   <none>        443:32308/TCP	3d11h
 ```
 前提2：`/etc/ansible/manifests/ingress/traefik/tls/traefik-controller.yaml`的配置文件`traefik.toml`开启了`insecureSkipVerify = true`
 

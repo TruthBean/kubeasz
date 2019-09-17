@@ -65,11 +65,11 @@ monitor-prometheus-node-exporter-r5dx8                   1/1       Running   0  
 monitor-prometheus-server-5ccfc77dff-8h9k6               2/2       Running   0          2m
 
 NAME                                    TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
-grafana                                 NodePort    10.68.74.242   <none>        80:39002/TCP   1m
-monitor-prometheus-alertmanager         NodePort    10.68.69.105   <none>        80:39001/TCP   2m
+grafana                                 NodePort    10.68.74.242   <none>        80:32002/TCP   1m
+monitor-prometheus-alertmanager         NodePort    10.68.69.105   <none>        80:32001/TCP   2m
 monitor-prometheus-kube-state-metrics   ClusterIP   None           <none>        80/TCP         2m
 monitor-prometheus-node-exporter        ClusterIP   None           <none>        9100/TCP       2m
-monitor-prometheus-server               NodePort    10.68.248.94   <none>        80:39000/TCP   2m
+monitor-prometheus-server               NodePort    10.68.248.94   <none>        80:32000/TCP   2m
 ```
 
 - 访问prometheus的web界面：`http://$NodeIP:39000`

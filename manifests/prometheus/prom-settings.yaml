@@ -10,7 +10,7 @@ server:
     enabled: false
   service:
     type: NodePort
-    nodePort: 39000
+    nodePort: 32000
 
 pushgateway:
   enabled: false

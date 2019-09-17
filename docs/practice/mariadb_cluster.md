@@ -40,8 +40,8 @@ service:
   type: NodePort     # 方便集群外部访问
   port: 3306
   nodePort:
-    master: 33306    # 设置主库的nodePort
-    slave: 33307     # 设置从库的nodePort
+    master: 32306    # 设置主库的nodePort
+    slave: 32307     # 设置从库的nodePort
 
 rootUser:            # 设置 root 密码
   password: test.c0m
@@ -97,7 +97,7 @@ $ kubectl get pod,svc | grep mariadb
 pod/mariadb-mariadb-master-0      1/1     Running   0          27m
 pod/mariadb-mariadb-slave-0       1/1     Running   0          29m
 
-service/mariadb                       NodePort    10.68.170.168   <none>        3306:33306/TCP       29m
-service/mariadb-mariadb-slave         NodePort    10.68.151.95    <none>        3306:33307/TCP       29m
+service/mariadb                       NodePort    10.68.170.168   <none>        3306:32306/TCP       29m
+service/mariadb-mariadb-slave         NodePort    10.68.151.95    <none>        3306:32307/TCP       29m
 ```
 

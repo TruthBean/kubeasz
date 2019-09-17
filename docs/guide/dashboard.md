@@ -33,7 +33,7 @@ kubectl get pod -n kube-system | grep dashboard
 kubernetes-dashboard-7c74685c48-9qdpn   1/1       Running   0          22s
 # 查看dashboard service
 kubectl get svc -n kube-system|grep dashboard
-kubernetes-dashboard   NodePort    10.68.219.38   <none>        443:24108/TCP                   53s
+kubernetes-dashboard   NodePort    10.68.219.38   <none>        443:30443/TCP                   53s
 # 查看集群服务
 kubectl cluster-info|grep dashboard
 kubernetes-dashboard is running at https://192.168.1.1:6443/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy
